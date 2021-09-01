@@ -10,10 +10,11 @@ public class NodeMain {
 			Integer value = myLinkedHashMap.get(word);
 			if(value==null) value=1;
 			else value=value+1;
-			myLinkedHashMap.add(word, value);
-			
+			myLinkedHashMap.add(word, value);	
 		}
 		System.out.println("frequency of word to is "+myLinkedHashMap.get("to"));
+		System.out.println(myLinkedHashMap);
+		myLinkedHashMap.remove("to");
 		System.out.println(myLinkedHashMap);
 
 	}
