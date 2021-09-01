@@ -38,6 +38,15 @@ public class MyLinkedHashMap<K,V>{
 		else
 			node.setValue(value);
 	}
+	public void remove(K key) {
+		int index = this.getBucketIndex(key);
+		MyLinkedList<K> myLinkedList = this.myBuketArray.get(index);
+		if(myLinkedList==null) {
+			System.out.println("no such value present");
+			return;
+		}
+		myLinkedList.delete(key);
+	}
 	@Override
 	 public String toString() {
 		 return "MyHashMapNodes{"+myBuketArray+'}';
